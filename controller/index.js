@@ -88,7 +88,7 @@ const createImageController = async (req, res) => {
         texts.push(text.description);
       }
   
-      const labels = texts; // 將 texts 作為 labels
+      const labels = texts; 
       const newImage = await db("image")
         .insert({
           name: imageFileName,
