@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "3ce28013-3ab3-41eb-b489-53dd8b1b68cf",
+		"name": "GoogleOCR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39347412"
+	},
+	"item": [
+		{
+			"name": "getallimages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/documents",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchimage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/documents?search_text=dream",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"documents"
+					],
+					"query": [
+						{
+							"key": "search_text",
+							"value": "dream"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendImage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageFile",
+							"type": "file",
+							"src": "postman-cloud:///1efb6050-9d01-4be0-816f-538b3e0d0969"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/documents",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lookimage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/images/smile.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"smile.png"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
